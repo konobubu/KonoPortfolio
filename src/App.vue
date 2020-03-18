@@ -1,12 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <div class="nav">
+        <div class="nav-item">
+          <router-link to="/" class="nav-item">Home</router-link>
+          <router-link to="/about" class="nav-item">About</router-link>
+          <router-link to="/contact" class="nav-item">Contact</router-link>
+        </div>
+      </div>
+      <!-- navとfuuterは固定する -->
+      <router-view/><!-- ここに表示させるやつを必死こいて書いています -->
+      <div class="footer">
+        <strong>Kono Portfolio</strong> by <span>Kono</span>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import 'normalize.css'
+// import VeeValidate, { Validator } from 'vee-validate'
+export default {
+  name: 'App'
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,18 +32,50 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
 }
 
-#nav {
-  padding: 30px;
+.container{
+  background-color: #f5f2ed;
+}
+
+.nav {
+  // width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+  padding: 24px 60px;
 
   a {
     font-weight: bold;
     color: #2c3e50;
+    text-decoration: none;
 
     &.router-link-exact-active {
       color: #42b983;
     }
   }
 }
+
+.nav-item{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 12px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    background-color: beige;
+    line-height: 50px;
+
+    span{
+        font-weight: bold;
+    }
+}
+
 </style>
