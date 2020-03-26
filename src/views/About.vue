@@ -81,14 +81,7 @@ export default {
       width: 48%;
     }
   }
-
-  figure{
-    // width: 100px;
-    // height: 100px;
-    // text-align: center;
-  }
 }
-
 
 @keyframes text-in {
   0% {
@@ -108,8 +101,8 @@ export default {
   margin-right: 5px;
   font-size: 15px;
   font-family: AlfaSlabOne-Regular, sans-serif;
-  -webkit-animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+  -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+  animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
   margin-bottom: 12px;
 }
 
@@ -124,8 +117,8 @@ export default {
   font-size: 15px;
   font-weight: bold;
   font-family: AlfaSlabOne-Regular, sans-serif;
-  -webkit-animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+  -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+  animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
   margin-bottom: -10px;
 }
 </style>

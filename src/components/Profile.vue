@@ -40,8 +40,8 @@
             height: 140px;
             border-radius: 50%;
             position: absolute;
-            left: 90px;
-            top: 73px;
+            left: 27%;
+            top: 35%;
         }
     }
 
