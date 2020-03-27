@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'Skill',
     props: { //About.vueからデータを受け取る
@@ -47,48 +48,87 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@media screen and (max-width:479px) { //sp
+    .skill-table{
+        height: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-.skill-table{
-    height: 300px;
-    width: 100%;
-    margin: 0 auto;
+    table{
+        border-style: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: 40px 20px;
+    }
+
+    .table-conect{
+        width: 10%;
+    }
+
+    .star-rating{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        color: #ffcc33;
+        width: 70%;
+    }
+
+    .skill-lang{
+        width: 45%;
+    }
+
+    .skill-star{
+        width: 45%;
+    }
 }
 
-table{
-    border-style: none;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border-collapse: separate;
-    border-spacing: 40px 20px;
-}
 
-.table-conect{
-    width: 10%;
-}
+@media screen and (min-width:480px) { //pc
+    .skill-table{
+        height: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-.star-rating{
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #ffcc33;
-}
+    table{
+        border-style: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: 40px 20px;
+    }
 
-.skill-lang{
-    width: 45%;
-}
+    .table-conect{
+        width: 10%;
+    }
 
-.skill-star{
-    width: 45%;
-}
+    .star-rating{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        color: #ffcc33;
+    }
 
-/* .skill-star::before{
-    content: "・・・・";
-    text-align: left;
-} */
-/* .star-rating .star-rating-item{
-    position: absolute;
-    
-} */
+    .skill-lang{
+        width: 45%;
+    }
+
+    .skill-star{
+        width: 45%;
+    }
+
+    /* .skill-star::before{
+        content: "・・・・";
+        text-align: left;
+    } */
+    /* .star-rating .star-rating-item{
+        position: absolute;
+        
+    } */
+}
 </style>

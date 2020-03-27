@@ -2,7 +2,7 @@
   <div class="about">
     <Profile/>
     <div class="skill-wrapper">
-      <div class="skill">
+      <div v-inview:animate="'fadeInLeft'" class="skill">
         <span
           v-for="(value,key) in skillText"
           v-bind:key="key"
@@ -27,13 +27,15 @@
 </template>
 
 <script>
+// import Inview from 'vueinview';
 import Skill from '@/components/Skill.vue'
 import Profile from '@/components/Profile.vue'
 
 export default {
   components: {
     Skill,
-    Profile
+    Profile,
+    // Inview
   },
   data() {
     return {
@@ -62,63 +64,122 @@ export default {
 
 <style scoped lang="scss">
 
-.about{
-  height: 825px;
+@media screen and (max-width:479px) { //sp
+  .about{
+    height: calc(100% - 100px);
 
-  .skill-wrapper{
-    display: flex;
-    justify-content: space-between;
-    width: 65%;
-    margin: 0 auto;
+    .skill-wrapper{
+      margin: 0 auto;
 
-    .skill{
-      margin: 88px 0 36px 0;
+      .skill{
+        margin: 88px 0 36px 0;
+      }
+
+      .study{
+        margin: 88px 0 30px 0;
+      }
+    }
+  }
+
+  @keyframes text-in {
+    0% {
+      transform: translate(0, -100px);
+      opacity: 0;
+    }
+  }
+
+  .skill-txt {
+    display: inline-block;
+    width: 17px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #2bb1a8;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 15px;
+    font-family: AlfaSlabOne-Regular, sans-serif;
+    -webkit-animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    margin-bottom: 12px;
+  }
+
+  .study-txt{
+    display: inline-block;
+    width: 17px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #2bb1a8;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 15px;
+    font-family: AlfaSlabOne-Regular, sans-serif;
+    -webkit-animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    animation: text-in-data-v-039c5b43 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width:480px) { //pc
+  .about{
+    height: 825px;
+
+    .skill-wrapper{
+      display: flex;
+      justify-content: space-between;
       width: 65%;
-    }
+      margin: 0 auto;
 
-    .study{
-      margin: 88px 0 30px 0;
-      width: 48%;
+      .skill{
+        margin: 88px 0 36px 0;
+        width: 65%;
+      }
+
+      .study{
+        margin: 88px 0 30px 0;
+        width: 48%;
+      }
     }
   }
-}
 
-@keyframes text-in {
-  0% {
-    transform: translate(0, -100px);
-    opacity: 0;
+  @keyframes text-in {
+    0% {
+      transform: translate(0, -100px);
+      opacity: 0;
+    }
   }
-}
 
-.skill-txt {
-  display: inline-block;
-  width: 18px;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: #2bb1a8;
-  font-weight: bold;
-  color: #fff;
-  margin-right: 5px;
-  font-size: 15px;
-  font-family: AlfaSlabOne-Regular, sans-serif;
-  -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  margin-bottom: 12px;
-}
+  .skill-txt {
+    display: inline-block;
+    width: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #2bb1a8;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 15px;
+    font-family: AlfaSlabOne-Regular, sans-serif;
+    -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    margin-bottom: 12px;
+  }
 
-.study-txt{
-  display: inline-block;
-  width: 18px;
-  padding: 8px;
-  color: #fff;
-  border-radius: 50%;
-  background-color: #a9a9a9;
-  margin-right: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  font-family: AlfaSlabOne-Regular, sans-serif;
-  -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
-  margin-bottom: -10px;
+  .study-txt{
+    display: inline-block;
+    width: 18px;
+    padding: 8px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #a9a9a9;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: AlfaSlabOne-Regular, sans-serif;
+    -webkit-animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 10s backwards;
+    margin-bottom: -10px;
+  }
 }
 </style>

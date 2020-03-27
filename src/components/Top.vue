@@ -54,14 +54,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.top{
-  background-color: darkgrey;
+@media screen and (max-width:479px) { //sp
+  .top{
+    background-color: darkgrey;
+  }
+
+  .vue-typer{
+    min-width: 0.3em;
+    font-size: 2rem;
+  }
 }
 
-.vue-typer{
-  min-width: 0.3em;
-  font-size: 4rem;
-}
+@media screen and (min-width:480px) { //pc
+  .top{
+    background-color: darkgrey;
+  }
 
+  .vue-typer{
+    min-width: 0.3em;
+    font-size: 4rem;
+  }
+}
 
 </style>

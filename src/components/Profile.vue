@@ -18,6 +18,59 @@
 
 <style scoped lang="scss">
 
+@media screen and (max-width:479px) { //sp
+.profile-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+    background-color: #fff;
+}
+
+.profile{
+
+    .profile-img{
+        width: 100%;
+        position: relative;
+
+        img{
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            position: absolute;
+            top: 7rem;
+            left: 27%;
+        }
+    }
+
+    .profile-txt{
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+
+        h2{
+            font-family: AlfaSlabOne-Regular,sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            // position: absolute;
+            // top: 0;
+            // left: 20px;
+        }
+
+        p{
+            padding-top: 10rem;
+            line-height: 28px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+} 
+ 
+}
+
+
+@media screen and (min-width:480px) { //pc
 .profile-wrapper{
     width: 53%;
     margin: 0 auto;
@@ -67,6 +120,5 @@
         }
     }
 }
-
-
+}
 </style>

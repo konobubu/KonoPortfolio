@@ -25,11 +25,21 @@ export default {
 
 <style scoped lang="scss">
 
-$home-height: calc(100vh - 110px);
 
-.home{
-  height: $home-height;
-  line-height: calc(100vh - 420px);
-  /* line-height: 570px; */
+@media screen and (max-width:479px) { //sp
+  .home{
+    height: calc(100vh - 98px);
+    line-height: calc(100vh - 280px);
+    /* line-height: 570px; */
+  }
+}
+
+@media screen and (min-width:480px) { //pc
+$home-height: calc(100vh - 110px);
+  .home{
+    height: $home-height;
+    line-height: calc(100vh - 420px);
+    /* line-height: 570px; */
+  }
 }
 </style>

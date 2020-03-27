@@ -79,59 +79,118 @@
 </script>
 
 <style scoped lang="scss">
+@media screen and (max-width:479px) { //sp
+    $contact-height: calc(100vh - 100px);
 
-$contact-height: calc(100vh - 110px);
+    .contact{
+        height: $contact-height;
 
-.contact{
-    height: $contact-height;
+        h1{
+            width: 80%;
+            margin: 0 auto;
+            font-weight: normal;
+            padding-bottom: 16px;
+            font-family: AlfaSlabOne-Regular,sans-serif;
+            font-size: 20px;
+            padding-top: 3rem;
+            padding-bottom: 40px;
+        }
+    }
 
-    h1{
-        width: 80%;
+    .contact-form{
+        width: 60%;
         margin: 0 auto;
-        font-weight: normal;
-        padding-bottom: 16px;
-        font-family: AlfaSlabOne-Regular,sans-serif;
-        font-size: 20px;
-        padding-bottom: 40px;
+
+        .contact-label{
+            text-align: left;
+        }
+
+        .input-content{
+            width: 100%;
+            border-radius: 3px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            margin-bottom: 24px;
+        }
+
+        .input-content:focus {
+            box-shadow: 0 0 5px 0 rgba(255,153,0,1);
+            border: 2px solid #FFF !important;
+            outline: 0;
+        }
+
+        .txtarea-content{
+            width: 100%;
+            border-radius: 3%;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            height: 100px;
+            margin-bottom: 24px;
+        }
+
+        .contact-btn{
+            padding: 8px 16px;
+            background: #41B888;
+            color: #fff;
+        }
     }
 }
 
-.contact-form{
-    width: 25%;
-    margin: 0 auto;
+@media screen and (min-width:480px) { //pc
+    $contact-height: calc(100vh - 110px);
 
-    .contact-label{
-        text-align: left;
+    .contact{
+        height: $contact-height;
+
+        h1{
+            width: 80%;
+            margin: 0 auto;
+            font-weight: normal;
+            padding-bottom: 16px;
+            font-family: AlfaSlabOne-Regular,sans-serif;
+            font-size: 20px;
+            padding-bottom: 40px;
+        }
     }
 
-    .input-content{
-        width: 100%;
-        border-radius: 3px;
-        padding: 8px 12px;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        margin-bottom: 24px;
-    }
+    .contact-form{
+        width: 25%;
+        margin: 0 auto;
 
-    .input-content:focus {
-        box-shadow: 0 0 5px 0 rgba(255,153,0,1);
-        border: 2px solid #FFF !important;
-        outline: 0;
-    }
+        .contact-label{
+            text-align: left;
+        }
 
-    .txtarea-content{
-        width: 100%;
-        border-radius: 3%;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        height: 100px;
-        margin-bottom: 24px;
-    }
+        .input-content{
+            width: 100%;
+            border-radius: 3px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            margin-bottom: 24px;
+        }
 
-    .contact-btn{
-        padding: 8px 16px;
-        background: #41B888;
-        color: #fff;
+        .input-content:focus {
+            box-shadow: 0 0 5px 0 rgba(255,153,0,1);
+            border: 2px solid #FFF !important;
+            outline: 0;
+        }
+
+        .txtarea-content{
+            width: 100%;
+            border-radius: 3%;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            height: 100px;
+            margin-bottom: 24px;
+        }
+
+        .contact-btn{
+            padding: 8px 16px;
+            background: #41B888;
+            color: #fff;
+        }
     }
 }
 
