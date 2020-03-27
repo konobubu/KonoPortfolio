@@ -28,7 +28,7 @@ export default {
 
 @media screen and (max-width:479px) { //sp
   .home{
-    height: calc(100vh - 98px);
+    height: calc(100% - 98px);
     line-height: calc(100vh - 280px);
     /* line-height: 570px; */
   }
