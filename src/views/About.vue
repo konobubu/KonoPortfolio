@@ -65,8 +65,10 @@ export default {
 <style scoped lang="scss">
 
 @media screen and (max-width:479px) { //sp
+html, body { height: 100%; }
+
   .about{
-    height: calc(100% - 100px);
+    height: 100%;
 
     .skill-wrapper{
       margin: 0 auto;

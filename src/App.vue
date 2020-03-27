@@ -27,6 +27,7 @@ export default {
 
 <style lang="scss">
 @media screen and (max-width:479px) { //sp
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

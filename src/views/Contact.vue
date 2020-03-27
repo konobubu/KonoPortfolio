@@ -80,10 +80,10 @@
 
 <style scoped lang="scss">
 @media screen and (max-width:479px) { //sp
-    $contact-height: calc(100% - 100px);
 
     .contact{
-        height: $contact-height;
+        height: 100vh;
+        margin-top: 2rem;
 
         h1{
             width: 80%;
