@@ -50,8 +50,8 @@ export default {
                     name: "easy-css",
                     text: "HTMLやCSSを書きたいけど分からない..... そういった方でも安心して使っていただけるようなHTML&CSSのコピペサイト",
                     lang: "JavaScript(Vue.js) / HTML / CSS",
-                    link: "https://github.com/konobubu/easy-css",
-                    linkname: "github"
+                    link: "https://konobubu.github.io/easy-css/",
+                    linkname: "github page"
                 }
             ]
         }
