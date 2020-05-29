@@ -52,6 +52,14 @@ export default {
                     lang: "JavaScript(Vue.js) / HTML / CSS",
                     link: "https://konobubu.github.io/easy-css/",
                     linkname: "github page"
+                },
+                {
+                    id: 5,
+                    name: "スライダー",
+                    text: "主にスマホで使うことを想定した縦スライダー。cssもsp用のみです",
+                    lang: "JavaScript(JQuery) / HTML / CSS",
+                    link: "https://konobubu.github.io/tateSlider/",
+                    linkname: "github page"
                 }
             ]
         }
@@ -65,7 +73,8 @@ export default {
     .work-wrapper{
         width: 100%;
         margin: 0 auto;
-        height: calc(100% - 70px);
+        height: auto;
+        padding-bottom: 60px;
     }
 }
 
@@ -76,7 +85,8 @@ export default {
         justify-content: space-around;
         width: 70%;
         margin: 0 auto;
-        height: calc(100vh - 70px);
+        height: auto;
+        padding-bottom: 60px;
     }
 }
 
