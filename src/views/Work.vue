@@ -60,7 +60,17 @@ export default {
                     lang: "JavaScript(JQuery) / HTML / CSS",
                     link: "https://konobubu.github.io/tateSlider/",
                     linkname: "github page"
-                }
+                },
+                {
+                    id: 6,
+                    name: "タイピングゲーム",
+                    text: "タイピングゲームをVueで作ってみました。",
+                    lang: "JavaScript(Vue.js) / HTML / CSS",
+                    link: "https://konobubu.github.io/typing/",
+                    linkname: "github page"
+                },
+
+                
             ]
         }
     },
@@ -74,7 +84,7 @@ export default {
         width: 100%;
         margin: 0 auto;
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
 }
 
