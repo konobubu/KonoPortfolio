@@ -10,7 +10,9 @@
         </div>
       </div>
       <!-- navとfuuterは固定する -->
-      <router-view/><!-- ここに表示させるやつを必死こいて書いています -->
+      <transition mode=”out-in”>
+        <router-view/><!-- ここに表示させるやつを必死こいて書いています -->]
+      </transition>
       <div class="footer">
         <strong>Kono Portfolio</strong> by <span>Kono</span>
       </div>
@@ -137,4 +139,30 @@ export default {
     }
   }
 }
+
+
+.v-enter {
+  transform: translate(-130px, 0);
+  opacity: 0;
+}
+.v-enter-to {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.v-enter-active {
+  transition: all 1.5s ease;
+}
+
+.v-leave {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.v-leave-to {
+  transform: translate(100px, 0);
+  opacity: 0;
+}
+.v-leave-active {
+  transition: all .5s ease;
+}
+
 </style>
